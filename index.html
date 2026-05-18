@@ -225,12 +225,17 @@
     .metric-strip {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 42px;
+      gap: 12px;
+      margin-top: 34px;
     }
 
     .metric {
-      padding: 18px;
+      min-width: 0;
+      min-height: 116px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 18px 16px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 255, 255, .72);
@@ -246,16 +251,28 @@
 
     .metric strong {
       display: block;
-      font-size: 28px;
+      font-size: clamp(26px, 2.35vw, 38px);
       line-height: 1;
+      letter-spacing: 0;
+      white-space: nowrap;
     }
 
     .metric span {
       display: block;
-      margin-top: 8px;
+      margin-top: 12px;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.4;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 1100px) {
+      .metric strong {
+        font-size: clamp(22px, 2.8vw, 32px);
+      }
+
+      .metric span {
+        font-size: 14px;
+      }
     }
 
     .showcase {
@@ -897,11 +914,16 @@
       }
 
       .metric {
-        padding: 15px;
+        min-height: 104px;
+        padding: 16px;
       }
 
       .metric strong {
-        font-size: 25px;
+        font-size: 28px;
+      }
+
+      .metric span {
+        font-size: 13px;
       }
 
       section {
@@ -1070,24 +1092,6 @@
             <a class="btn btn-secondary" href="#skills">Lihat Skill</a>
           </div>
           <p class="hero-note">Portfolio utama: <strong>@ezplan_id</strong>, <strong>@fellisrgns</strong>, dan project content monetization Facebook.</p>
-          <div class="metric-strip" id="results">
-            <div class="metric">
-              <strong>8.000+</strong>
-              <span>sales</span>
-            </div>
-            <div class="metric">
-              <strong>Rp300Jt+</strong>
-              <span>Meta Ads spend</span>
-            </div>
-            <div class="metric">
-              <strong>130K</strong>
-              <span>followers</span>
-            </div>
-            <div class="metric">
-              <strong>30Jt+</strong>
-              <span>views + FB monetization</span>
-            </div>
-          </div>
         </div>
 
         <div class="showcase" aria-label="Foto dan ringkasan profil Luthfy">
@@ -1100,6 +1104,24 @@
               <p>Meta Ads, content monetization, landing page, dashboard, dan AI creative.</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="shell metric-strip" id="results">
+        <div class="metric">
+          <strong>8.000+</strong>
+          <span>sales</span>
+        </div>
+        <div class="metric">
+          <strong>Rp300Jt+</strong>
+          <span>Meta Ads spend</span>
+        </div>
+        <div class="metric">
+          <strong>130K</strong>
+          <span>followers</span>
+        </div>
+        <div class="metric">
+          <strong>30Jt+</strong>
+          <span>views + FB monetization</span>
         </div>
       </div>
     </section>
