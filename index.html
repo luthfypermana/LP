@@ -280,9 +280,9 @@
     }
 
     .profile-card {
-      width: min(100%, 410px);
+      width: min(100%, 340px);
       margin-left: auto;
-      padding: 18px;
+      padding: 14px;
       border: 1px solid rgba(228, 231, 236, .95);
       border-radius: 8px;
       background: rgba(255, 255, 255, .86);
@@ -292,14 +292,15 @@
     .profile-photo-wrap {
       overflow: hidden;
       border-radius: 8px;
+      aspect-ratio: 1;
       background: #fff;
     }
 
     .profile-photo {
       width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: center top;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
     }
 
     .profile-caption {
@@ -979,7 +980,7 @@
       }
 
       .profile-card {
-        width: min(100%, 320px);
+        width: min(100%, 280px);
         padding: 12px;
         justify-self: center;
       }
